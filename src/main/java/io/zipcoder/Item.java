@@ -1,10 +1,14 @@
 package io.zipcoder;
 
+import java.util.Formatter;
+import java.util.HashMap;
+
 public class Item {
     private String name;
     private Double price;
     private String type;
     private String expiration;
+
 
     /**
      * Item should not be created unless you have all of the elements, which is why you are forcing
@@ -23,26 +27,39 @@ public class Item {
     }
 
     public String getName() {
+
         return name;
     }
 
 
     public Double getPrice() {
+
         return price;
     }
 
 
     public String getType() {
+
         return type;
     }
 
 
     public String getExpiration() {
+
         return expiration;
     }
 
     @Override
     public String toString(){
-        return "name:" + name + " price:" + price + " type:" + type + " expiration:" + expiration;
+        StringBuilder shoppingList = new StringBuilder();
+        Formatter prettyPrint = new Formatter(shoppingList);
+        prettyPrint.format("name: %s price: %f type: %s expiration: %s%n",
+                this.getName(), this.getPrice(), this.getType(), this.getExpiration());
+        return shoppingList.toString();
+        //return "name:" + name + " price:" + price + " type:" + type + " expiration:" + expiration;
+
+
     }
 }
+
+
