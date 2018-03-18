@@ -12,15 +12,15 @@ public class ItemParser {
         return response;
     }
 
-    //Step 3, breaking up each individual string added additional tokens to split on
+    //Step 2, breaking up each individual string added additional tokens to split on
     public static ArrayList<String> findKeyValuePairsInRawItemData(String rawItem) {
         String stringPattern = "[;|\\^|%|\\*|!|@]";
         ArrayList<String> response = splitStringWithRegexPattern(stringPattern, rawItem);
         return response;
     }
 
-    //Step2,we need to know which key we are working on depending on key we will get back a string
-    //or a double as the porperty
+    //Step3, we need to know which key we are working on depending on key we will get back a string
+    //or a double as the property
     public static Item parseStringIntoItem(String rawItem) throws ItemParseException {
         ArrayList<String> itemRow = findKeyValuePairsInRawItemData(rawItem);
 
