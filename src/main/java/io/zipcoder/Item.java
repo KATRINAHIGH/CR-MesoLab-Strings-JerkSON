@@ -49,17 +49,7 @@ public class Item {
         return expiration;
     }
 
-    @Override
-    public String toString(){
-        StringBuilder shoppingList = new StringBuilder();
-        Formatter prettyPrint = new Formatter(shoppingList);
-        prettyPrint.format("name: %s price: %f type: %s expiration: %s%n",
-                this.getName(), this.getPrice(), this.getType(), this.getExpiration());
-        return shoppingList.toString();
-        //return "name:" + name + " price:" + price + " type:" + type + " expiration:" + expiration;
 
-
-    }
 }
 
 

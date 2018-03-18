@@ -34,18 +34,18 @@ public class ItemParserTest {
         assertEquals(expectedArraySize, actualArraySize);
     }
 
-//    @Test Parsed out hashMarks earlier than this method doesn't make sense for them to be here. Invalid test!!
+//    @Test //Parsed out hashMarks earlier than this method doesn't make sense for them to be here. Invalid test!!
 //    public void parseStringIntoItemTest() throws ItemParseException{
 //        Item expected = new Item("milk", 3.23, "food","1/25/2016");
 //        Item actual = itemParser.parseStringIntoItem(rawSingleItem);
 //        assertEquals(expected.toString(), actual.toString());
 //    }
 
-//    @Test(expected = ItemParseException.class) Invalid test, contains all key value pairs, shouldn't throw once parsed,
+    @Test(expected = ItemParseException.class) //Invalid test, contains all key value pairs, shouldn't throw once parsed,
     //parsing of the separators told to parse by so shouldn't throw an exception
-//    public void parseBrokenStringIntoItemTest() throws ItemParseException{
-//        itemParser.parseStringIntoItem(rawBrokenSingleItem);
-//    }
+    public void parseBrokenStringIntoItemTest() throws ItemParseException{
+        itemParser.parseStringIntoItem(rawBrokenSingleItem);
+    }
 
     @Test
     public void findKeyValuePairsInRawItemDataTest(){
