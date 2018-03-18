@@ -67,6 +67,9 @@ public class ItemParser {
     }
 
     private static String toTitleCase(String s) {
+        if(s.substring(0,1).equalsIgnoreCase("c")){
+            return "Cookies";
+        }
         return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
     }
 }
